@@ -47,10 +47,10 @@
     </nav>
 	<!-- end header nav -->	
 <?php include '../include/side-nav.php';?>
-	<section class="wrapper" style="margin-left: 16%;margin-top: -11%;">
+	<section class="wrapper" style="margin-left: 16%;margin-top: -11%; min-height: 100vh;">
 		<!-- <div class="container"> -->
 			<!-- <div class="row"> -->
-				<div class="col-md-12">
+				<div class="col-md-12 mt-5 ">
 					<h1>Dashboard</h1>
 					<div class="row">						
 						<?php 

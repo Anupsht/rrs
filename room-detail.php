@@ -1,6 +1,7 @@
 <?php
 require 'config/config.php';
-
+$bookingMsg = '';
+$bookingSuccessMsg='';
 if (isset($_GET['room_id'])) {
     $room_id = $_GET['room_id'];
     try {
@@ -19,7 +20,7 @@ if (isset($_GET['room_id'])) {
 }
 
 if (isset($_POST['book_now'])) {
-    $bookingMsg = '';
+    
 
     // Get data from FROM
     $name = trim($_POST['name']);
@@ -57,7 +58,7 @@ if (isset($_POST['book_now'])) {
 }
 
 if (isset($_GET['action'])) {
-    $bookingMsgSuccess = 'Room Booked Successfully. Thank you';
+    $bookingSuccessMsg = 'Room Booked Successfully. Thank you';
 }
 
 ?>
@@ -103,6 +104,7 @@ if (isset($room['image'])) {
                 <h5 class="d-flex justify-content-center ">Property Details</h5>
                 <div class="text-white">
                    <p>Address:   <?php echo $room['address'] ?></p> 
+                   <p>Description:   <?php echo $room['description'] ?></p> 
                 </div>
             </div>
             <div class="col-md-4">
@@ -115,21 +117,21 @@ if (isset($room['image'])) {
     </div>
 </div>
 <div class="container my-4">
-    <?php
-    if(empty($bookingMsg))
-    if(isset($bookingMsgSuccess)){
+
+<?php if($bookingMsg){ ?>
+    <div class="alert alert-danger">
+    <?php  echo $bookingMsg ?>
+</div>
+
+<?php } ?>
+    <?php 
+    if($bookingSuccessMsg){
         ?>
         <div class="alert alert-success">
-       <?php   $bookingMsgSuccess ?>
-</div>
-<?php }else{ 
-    if(isset($bookingMsg)){?>
-<div class="alert alert-danger">
-    <?php   $bookingMsg ?>
-    </div>
-    
-<?php }} ?>
-    
+            <?php echo $bookingSuccessMsg ?>
+        </div>
+    <?php }
+    ?>
     
     <h3 class="d-flex justify-content-center">Book Now</h3>
     <form action="" method="POST" class="row">

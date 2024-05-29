@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-4">
-                  <span class="copyright">&copy; Room Recommendation System - <?php echo date("Y"); ?></span>
+                  <span class="copyright">&copy; Room Rental Management System - <?php echo date("Y"); ?></span>
         </div>
         <div class="col-md-4">
           <ul class="list-inline social-buttons">

@@ -23,7 +23,9 @@
             <li class="nav-item">
 	        	<a href="../app/list.php" class="nav-link">Details/Update</a>
             </li>
-
+            <li class="nav-item">
+	        	<a href="../app/bookings.php" class="nav-link">Bookings</a>
+            </li>
             
           </ul>
         </div>

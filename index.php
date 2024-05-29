@@ -111,10 +111,10 @@ include('include/nav.php');
 
 
 <!-- Header -->
-<header class="masthead">
+<header class="masthead min-vh-80 ">
   <div class="container">
     <div class="intro-text">
-      <div class="intro-lead-in">Welcome To Room Recommendation System</div>
+      <div class="intro-lead-in">Welcome To Room Rental Management System</div>
       <div class="intro-heading text-uppercase">Find ROOM Together!<br></div>
       <!-- <h1><span class="typed-text"></span><span class="cursor">&nbsp;</span></h1> -->
 
@@ -123,18 +123,19 @@ include('include/nav.php');
 </header>
 
 <!-- section -->
-<section class="banner d-flex align-items-center min-h-100 gap-2">
+<section class="banner d-flex align-items-center min-h-80 gap-2">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-6 col-md-12 d-flex flex-column gap-3">
         <h1 class="mb-2">Find Your Perfect Room with Ease</h1>
-        <p class="text-justify mb-3">Explore a diverse selection of rooms and book your ideal stay effortlessly.
+        <p class="text-justify mb-1">Explore a diverse selection of rooms and book your ideal stay effortlessly.
           With
           competitive prices
           and user-friendly features, Room Finders makes finding and booking rooms simple and stress-free.</p>
-        <a href="#" id="#rooms" class=" text-black ">Book Your room today</a>
+        <!-- <a href="room-detail.php" id="#rooms" class=" text-black ">Book Your room today</a> -->
+        <!-- <span class="badge badge-info">Book Your Room Today!</span> -->
+       <button type="button" class="btn btn-secondary  ">Book Your Room Today!</button>
       </div>
-
       <div class="col-lg-6">
         <figure class="d-none d-lg-block">
           <img src="assets/img/banner-img.webp" class="img-fluid" alt="Room Image">
@@ -218,6 +219,7 @@ include('include/nav.php');
           } else {
             echo '<div class="alert alert-success" role="alert"><h3><b>Vacant!</b></h3></div>';
           }
+          echo '<a href="room-detail.php?room_id=' . $value['id'] . '" class="btn btn-success btn-md text-uppercase mt-2">Book Now</a>';
           echo '</div>
                             </div>
                             </div>
@@ -271,15 +273,15 @@ include('include/nav.php');
               <li class="list-group-item">Dapibus ac facilisis in</li>
               <li class="list-group-item">Vestibulum at eros</li>
             </ul>
-            <div class="card-body d-flex justify-content-between">
-              <a href="#" class="card-link">View More</a>
+            <div class="card-body d-flex justify-content-center">
+              <!-- <a href="room-detail.php?room_id=<?php echo $room['id'] ?>" class="card-link">View More</a> -->
               <a href="room-detail.php?room_id=<?php echo $room['id'] ?>" class="card-link">Book Now</a>
             </div>
 
 
 
             <!-- Modal -->
-            
+
 
           </div>
         </div>

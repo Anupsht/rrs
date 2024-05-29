@@ -33,6 +33,7 @@ if(isset($_POST['register'])) {
                         ':email' => $email,
                         ':mobile' => $mobile,
                     ));
+                    $_SESSION['successMsg'] = 'Registration successful. Now you can login';
                     header('Location: register.php');
                     exit;
                 }
@@ -45,7 +46,8 @@ if(isset($_POST['register'])) {
 }
 
 if(isset($_GET['action']) && $_GET['action'] == 'joined') {
-    $errMsg = 'Registration successful. Now you can login';
+    $errMsg = isset($_SESSION['successMsg']) ? $_SESSION['successMsg'] : '';
+    unset($_SESSION['successMsg']); // Clear the message after displaying
 }
 ?>
 

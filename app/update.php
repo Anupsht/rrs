@@ -63,8 +63,7 @@ if (isset($_POST['register_individuals'])) {
 	$id = $_POST['id'];
 	$sale = $_POST['sale'];
 
-
-	if (empty($fullname) || empty($email) || empty($mobile) || empty($plot_number) || empty($country) || empty($state) || empty($city) || empty($address) || empty($rent) || empty($deposit) || empty($description) || empty($rooms) || empty($vacant) || empty($sale)) {
+	if (empty($fullname) || empty($email) || empty($mobile) || empty($plot_number) || empty($country) || empty($state) || empty($city) || empty($address) || empty($rent) || empty($deposit) || empty($description) || empty($rooms) || empty($sale)) {
 		$errMsg = 'All fields are required.';
 	} elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 		$errMsg = 'Invalid email format.';

@@ -1,6 +1,6 @@
 <!-- <div class="row"> -->
 <div class="col-md-11 col-xs-12 col-sm-12">
-	<div class="alert alert-info" role="alert">
+	<div class="alert alert-dark" role="alert">
 		<?php
 		if (isset($errMsg)) {
 			echo '<div style="color:#FF0000;text-align:center;font-size:17px;">' . $errMsg . '</div>';
@@ -134,14 +134,11 @@
 				<div class="col-4">
 					<div class="form-group">
 						<label for="vacant">Vacant/Occupied</label>
-						<select class="form-control" id="vacant" name="vacant">
-							<option value="1" <?php if ($data['vacant'] == '1') {
-													echo 'selected';
-												} ?>>Vacant</option>
-							<option value="0" <?php if ($data['vacant'] == '0') {
-													echo 'selected';
-												} ?>>Occupied</option>
+						<select class="form-control" id="vacant" name="vacant" required>
+							<option value="1" <?php if ($data['vacant'] == '1') echo 'selected'; ?>>Vacant</option>
+							<option value="0" <?php if ($data['vacant'] == '0') echo 'selected'; ?>>Occupied</option>
 						</select>
+
 					</div>
 				</div>
 				<div class="col-md-4">
@@ -157,7 +154,7 @@
 					</div>
 				</div>
 			</div>
-			<button type="submit" class="btn btn-primary" name='register_individuals' >Submit</button>
+			<button type="submit" class="btn btn-primary" name='register_individuals'>Submit</button>
 		</form>
 	</div>
 </div>
