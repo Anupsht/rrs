@@ -105,6 +105,7 @@ if (isset($room['image'])) {
                 <div class="text-white">
                    <p>Address:   <?php echo $room['address'] ?></p> 
                    <p>Description:   <?php echo $room['description'] ?></p> 
+                   <p>Rent:   <?php echo $room['rent'] ?></p> 
                 </div>
             </div>
             <div class="col-md-4">
